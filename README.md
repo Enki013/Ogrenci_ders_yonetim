@@ -1,163 +1,163 @@
 **Course Registration Form**
 
-Bu Java Swing uygulaması, kurs bilgilerini girmek, kaydetmek ve görüntülemek için bir arayüz sağlar.
+This Java Swing application provides an interface to enter, save, and view course information.
 
-**Sınıflar**
+**Classes**
 
-**1. Course**
+**1\. Course**
 
-Bu sınıf, bir kursun özelliklerini (kurs kodu, kurs adı, dönem, öğretim görevlisi) temsil eder.
+This class represents the attributes of a course (course code, course name, semester, lecturer).
 
-- **courseCode:** Kursun benzersiz kodu.
-- **courseName:** Kursun adı.
-- **courseSemester:** Kursun dönemi.
-- **lecturer:** Kursun öğretim görevlisi.
+-   **courseCode:** The unique code of the course.
+-   **courseName:** The name of the course.
+-   **courseSemester:** The semester of the course.
+-   **lecturer:** The lecturer of the course.
 
-**2. CourseForm**
+**2\. CourseForm**
 
-Bu sınıf, Java Swing JFrame kullanarak bir kurs kayıt formu oluşturur.
+This class creates a course registration form using Java Swing JFrame.
 
-Özellikler
+Attributes
 
-- **courseCodeField:** Kurs kodu giriş alanı.
-- **courseNameField:** Kurs adı giriş alanı.
-- **courseSemesterField:** Kurs dönemi giriş alanı.
-- **lecturerComboBox:** Öğretim görevlisi seçim kutusu.
-- **saveButton:** Kursu kaydetmek için düğme.
-- **courseTable:** Kaydedilmiş kurs bilgilerini görüntülemek için tablo.
-- **filterTextField:** Kursları filtrelemek için metin alanı.
-- **tableModel:** Kurs tablosu veri modeli.
+-   **courseCodeField:** Input field for course code.
+-   **courseNameField:** Input field for course name.
+-   **courseSemesterField:** Input field for course semester.
+-   **lecturerComboBox:** Combo box for selecting the lecturer.
+-   **saveButton:** Button to save the course.
+-   **courseTable:** Table to display saved course information.
+-   **filterTextField:** Text field to filter courses.
+-   **tableModel:** Data model for the course table.
 
-Metodlar
+Methods
 
-- **createStyledButton(String buttonText):** Stilize düğme oluşturur.
-- **validationCheck():** Kullanıcı girişlerini doğrular.
-- **saveCourse():** Girilen kurs bilgilerini JSON dosyasına kaydeder.
-- **readLecturers(String fileName):** Öğretim görevlilerini JSON dosyasından okur.
-- **writeCourse(JSONObject courseJson):** Kurs bilgilerini JSON dosyasına yazar.
-- **refreshCourseTable():** Kurs tablosunu günceller.
-- **readCourses(String fileName):** Kaydedilmiş kurs bilgilerini JSON dosyasından okur.
-- **filterCourseTable():** Kurs tablosunu metin filtresine göre filtreler.
-- **createLabel(String text):** Etiket oluşturur.
+-   **createStyledButton(String buttonText):** Creates a styled button.
+-   **validationCheck():** Validates user inputs.
+-   **saveCourse():** Saves the entered course information to a JSON file.
+-   **readLecturers(String fileName):** Reads lecturers from a JSON file.
+-   **writeCourse(JSONObject courseJson):** Writes course information to a JSON file.
+-   **refreshCourseTable():** Refreshes the course table.
+-   **readCourses(String fileName):** Reads saved course information from a JSON file.
+-   **filterCourseTable():** Filters the course table based on text input.
+-   **createLabel(String text):** Creates a label.
 
-Ana Metod
+Main Method
 
-- **main(String[] args):** Uygulamayı başlatan ana metod.
+-   **main(String[] args):** The main method that starts the application.
 
-**Nasıl Kullanılır?**
+**How to Use**
 
-1. Uygulama başlatıldığında, bir kurs eklemek için gerekli bilgileri girebilirsiniz.
-2. "Save" düğmesine tıkladığınızda, girilen kurs bilgileri kaydedilir.
-3. Kaydedilen kurslar tablo üzerinde görüntülenir.
-4. "Search" alanına yazılan metinle kursları filtreleyebilirsiniz.
+1.  When the application starts, enter the required information to add a course.
+2.  Click the "Save" button to save the entered course information.
+3.  The saved courses will be displayed in the table.
+4.  You can filter the courses using the "Search" field.
 
-**Bağımlılıklar**
+**Dependencies**
 
-- JSON Simple Library: JSON işlemleri için kullanılmıştır. (JSON dosyalarını okuma ve yazma)
+-   JSON Simple Library: Used for JSON operations (reading and writing JSON files).
 
 **Lecturer Registration Form**
 
-Bu Java Swing uygulaması, öğretim görevlileri hakkında bilgi girmek, kaydetmek ve görüntülemek için bir arayüz sağlar.
+This Java Swing application provides an interface to enter, save, and view lecturer information.
 
-**Sınıflar**
+**Classes**
 
-**1. LecturerForm**
+**1\. LecturerForm**
 
-Bu sınıf, Java Swing kullanarak bir öğretim görevlisi kayıt formu oluşturur.
+This class creates a lecturer registration form using Java Swing.
 
-Özellikler
+Attributes
 
-- **teacherNoField:** Öğretim görevlisinin benzersiz numarasını girmek için alan.
-- **nameField:** Öğretim görevlisinin adını girmek için alan.
-- **surnameField:** Öğretim görevlisinin soyadını girmek için alan.
-- **departmentField:** Öğretim görevlisinin bölümünü girmek için alan.
-- **saveButton:** Öğretim görevlisi bilgilerini kaydetmek için düğme.
-- **lecturerTable:** Kaydedilmiş öğretim görevlisi bilgilerini görüntülemek için tablo.
-- **filterTextField:** Öğretim görevlilerini filtrelemek için metin alanı.
-- **tableModel:** Öğretim görevlisi tablosu veri modeli.
+-   **teacherNoField:** Field to enter the unique number of the lecturer.
+-   **nameField:** Field to enter the lecturer's first name.
+-   **surnameField:** Field to enter the lecturer's last name.
+-   **departmentField:** Field to enter the lecturer's department.
+-   **saveButton:** Button to save lecturer information.
+-   **lecturerTable:** Table to display saved lecturer information.
+-   **filterTextField:** Text field to filter lecturers.
+-   **tableModel:** Data model for the lecturer table.
 
-Metodlar
+Methods
 
-- **saveLecturer():** Girilen öğretim görevlisi bilgilerini bir JSON dosyasına kaydeder.
-- **refreshLecturerTable():** Öğretim görevlisi tablosunu en güncel verilerle yeniler.
-- **createLabel(String text):** Biçimli bir etiket oluşturur.
-- **createStyledButton(String buttonText):** Biçimli bir düğme oluşturur.
-- **readLecturers(String fileName):** Öğretim görevlisi bilgilerini bir JSON dosyasından okur.
-- **filterLecturerTable():** Kullanıcı girişi temelinde öğretim görevlisi tablosunu filtreler.
+-   **saveLecturer():** Saves the entered lecturer information to a JSON file.
+-   **refreshLecturerTable():** Refreshes the lecturer table with the latest data.
+-   **createLabel(String text):** Creates a styled label.
+-   **createStyledButton(String buttonText):** Creates a styled button.
+-   **readLecturers(String fileName):** Reads lecturer information from a JSON file.
+-   **filterLecturerTable():** Filters the lecturer table based on user input.
 
-Ana Metod
+Main Method
 
-- **main(String[] args):** Uygulamayı başlatır.
+-   **main(String[] args):** The main method that starts the application.
 
-**Nasıl Kullanılır?**
+**How to Use**
 
-1. Uygulama başlatıldığında, yeni bir öğretim görevlisi eklemek için gerekli bilgileri girin.
-2. Öğretim görevlisi bilgilerini kaydetmek için "Kaydet" düğmesine tıklayın.
-3. Tabloda kaydedilen öğretim görevlisi bilgilerini görüntüleyin.
-4. Öğretim görevlilerini filtrelemek için "Ara" alanını kullanın.
+1.  When the application starts, enter the required information to add a new lecturer.
+2.  Click the "Save" button to save the lecturer information.
+3.  View the saved lecturer information in the table.
+4.  Use the "Search" field to filter lecturers.
 
-**Bağımlılıklar**
+**Dependencies**
 
-- JSON Simple Kütüphanesi: JSON işlemleri için kullanılmıştır. (JSON dosyalarını okuma ve yazma)
+-   JSON Simple Library: Used for JSON operations (reading and writing JSON files).
 
-**Not**
+**Note**
 
-- Öğretim görevlisi bilgileri "lecturers.json" adlı bir JSON dosyasında saklanır.
-- Uygulama, temel doğrulama ve filtreleme işlevselliği sağlar.
+-   Lecturer information is stored in a JSON file named "lecturers.json".
+-   The application provides basic validation and filtering functionality.
 
-**Student Registration**  **Form**
+**Student Registration Form**
 
-Bu Java Swing uygulaması, öğrenci bilgilerini girmek, kaydetmek ve görüntülemek için bir arayüz sağlar.
+This Java Swing application provides an interface to enter, save, and view student information.
 
-**Sınıflar**
+**Classes**
 
-**1. StudentForm**
+**1\. StudentForm**
 
-Bu sınıf, Java Swing kullanarak bir öğrenci kayıt formu oluşturur.
+This class creates a student registration form using Java Swing.
 
-Özellikler
+Attributes
 
-- **studentNumberField:** Öğrenci numarasını girmek için alan.
-- **studentNameField:** Öğrenci adını girmek için alan.
-- **studentSurnameField:** Öğrenci soyadını girmek için alan.
-- **studentDepartmentField:** Öğrenci bölümünü girmek için alan.
-- **studentCoursesField:** Öğrencinin aldığı dersleri seçmek için alan.
-- **saveButton:** Öğrenci bilgilerini kaydetmek için düğme.
-- **studentTable:** Kaydedilmiş öğrenci bilgilerini görüntülemek için tablo.
-- **filterTextField:** Öğrencileri filtrelemek için metin alanı.
-- **tableModel:** Öğrenci tablosu veri modeli.
+-   **studentNumberField:** Field to enter the student number.
+-   **studentNameField:** Field to enter the student's first name.
+-   **studentSurnameField:** Field to enter the student's last name.
+-   **studentDepartmentField:** Field to enter the student's department.
+-   **studentCoursesField:** Field to select the courses the student is taking.
+-   **saveButton:** Button to save student information.
+-   **studentTable:** Table to display saved student information.
+-   **filterTextField:** Text field to filter students.
+-   **tableModel:** Data model for the student table.
 
-Metodlar
+Methods
 
-- **readCourses():** Dersleri okuyarak bir liste döndürür.
-- **createStyledButton(String buttonText):** Biçimli bir düğme oluşturur.
-- **createStyledComboBox():** Biçimli bir açılır liste oluşturur.
-- **validationCheck():** Giriş doğrulaması yapar.
-- **saveStudent():** Girilen öğrenci bilgilerini bir JSON dosyasına kaydeder.
-- **refreshStudentTable():** Öğrenci tablosunu en güncel verilerle yeniler.
-- **readStudents(String fileName):** Öğrenci bilgilerini bir JSON dosyasından okur.
-- **printStudent(JSONObject studentJson):** Öğrenci bilgilerini ekrana yazdırır.
-- **filterStudentTable():** Kullanıcı girişi temelinde öğrenci tablosunu filtreler.
-- **createLabel(String text):** Biçimli bir etiket oluşturur.
+-   **readCourses():** Reads and returns a list of courses.
+-   **createStyledButton(String buttonText):** Creates a styled button.
+-   **createStyledComboBox():** Creates a styled combo box.
+-   **validationCheck():** Validates inputs.
+-   **saveStudent():** Saves the entered student information to a JSON file.
+-   **refreshStudentTable():** Refreshes the student table with the latest data.
+-   **readStudents(String fileName):** Reads student information from a JSON file.
+-   **printStudent(JSONObject studentJson):** Prints student information to the screen.
+-   **filterStudentTable():** Filters the student table based on user input.
+-   **createLabel(String text):** Creates a styled label.
 
-Ana Metod
+Main Method
 
-- **main(String[] args):** Uygulamayı başlatır.
+-   **main(String[] args):** The main method that starts the application.
 
-**Nasıl Kullanılır?**
+**How to Use**
 
-1. Uygulama başlatıldığında, yeni bir öğrenci eklemek için gerekli bilgileri girin.
-2. "Kaydet" düğmesine tıklayarak öğrenci bilgilerini kaydedin.
-3. Kaydedilen öğrenci bilgilerini tabloda görüntüleyin.
-4. "Ara" alanını kullanarak öğrencileri filtreleyin.
+1.  When the application starts, enter the required information to add a new student.
+2.  Click the "Save" button to save the student information.
+3.  View the saved student information in the table.
+4.  Use the "Search" field to filter students.
 
-**Bağımlılıklar**
+**Dependencies**
 
-- JSON Simple Kütüphanesi: JSON işlemleri için kullanılmıştır. (JSON dosyalarını okuma ve yazma)
+-   JSON Simple Library: Used for JSON operations (reading and writing JSON files).
 
-**Not**
+**Note**
 
-- Öğrenci bilgileri "students.json" adlı bir JSON dosyasında saklanır.
-- Uygulama, temel doğrulama ve filtreleme işlevselliği sağlar.
+-   Student information is stored in a JSON file named "students.json".
+-   The application provides basic validation and filtering functionality.
 
-İhtiyacınıza göre özelleştirip genişletebilirsiniz.
+You can customize and expand according to your needs.
